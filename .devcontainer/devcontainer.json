@@ -1,0 +1,25 @@
+{
+  "name": "Machine Learning Environment",
+  "image": "mcr.microsoft.com/vscode/devcontainers/python:3.9",
+  "features": {
+    "python": "latest"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "ms-python.vscode-pylance"
+      ]
+    }
+  },
+  "settings": {
+    "python.pythonPath": "/usr/local/bin/python",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.formatting.provider": "black"
+  },
+  "postCreateCommand": "pip install -r requirements.txt",
+  "forwardPorts": [8888],
+  "remoteUser": "vscode"
+}
